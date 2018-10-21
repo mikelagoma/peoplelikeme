@@ -70,6 +70,10 @@ a:hover, a:active {
     text-align: center;
 }
 
+.site-branding .site-title img {
+    max-width: 100%;
+}
+
 .site-navigation .site-title a {
     display: block;
 }
