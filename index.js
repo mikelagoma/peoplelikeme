@@ -141,9 +141,16 @@ express()
             customerData = Array()
             i = 2
             // for(i=0;i<100;i++) {
+            id = req.params.productId
+            if (id == 1) {
+              transactions = '/transactions'
+            }
+            else {
+              transactions = '/transactions/' + id
+            }
               rp({
                 method: 'GET',
-                uri: 'https://api-stg.syf.com/m2020/credit/customers/' + i + '/transactions/' + req.params.productId,
+                uri: 'https://api-stg.syf.com/m2020/credit/customers/' + i + transactions,
                 headers: {
                   'Authorization': 'Bearer ' + accessToken
                 }
@@ -168,33 +175,257 @@ express()
 
     function endRequest(data){
       console.log(data);
-      var mockedData = {
-        "id": req.params.productId,
-        "name": "Green Hoodie",
-        "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
-        "image": "/images/1.jpg", //this is updated below
-        "sku": "HDE-001",
+      var id = parseInt(req.params.productId) - 1
+      var mockedData = [
+        {
+          "id": 1,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
 
-        "retailer": "Retailer1",
-        "date": "2018-09-23",
-        "amount": "101.23",
-        "itemType": "clothes",
-        "links": [
-            {
-                "href": "/credit/customers/2/transactions/3",
-                "rel": "nextTransaction",
-                "method": "GET"
-            }
-        ]
-      };
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Sweatpants",
+          "description": "Made for life beyond the 9-to-5, sweatpants just got a grownup makeover.\n\
+\n\
+Micro-sanded french terry for softness and stretch \n\
+Stealth pocket\n\
+Ribbed cuffs\n\
+95% Cotton / 5% Stretch\n\
+Machine wash cold and tumble dry low\n\
+Imported",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-251",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "John Two-Button Lambskin Leather Blazer",
+          "description": "Shell: 100% New Zealand lambskin leather; Lining: 100% polyester\n\
+Contoured fit through chest and waist to give a modern and tailored appearance\n\
+One-button closure front; Narrow notch lapel; Single back vent; Decorative buttons at cuffs\n\
+One chest pocket and two angled flap pockets; Three interior pockets",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-246",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Goodyear Ultra Grip® Performance 2",
+          "description": "An ultra high-performance tire that offers strong grip to help maneuver through winter conditions.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Echo Dot",
+          "description": "A Certified Refurbished Echo Dot is refurbished, tested, and certified to look and work like new\n\
+Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set alarms, read audiobooks from Audible, and more",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Green Hoodie",
+          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "image": "/images/1.jpg", //this is updated below
+          "sku": "HDE-001",
+
+          "retailer": "Retailer1",
+          "date": "2018-09-23",
+          "amount": "101.23",
+          "itemType": "clothes",
+          "links": [
+              {
+                  "href": "/credit/customers/2/transactions/3",
+                  "rel": "nextTransaction",
+                  "method": "GET"
+              }
+          ]
+        }
+      ]
       
-      mockedData.image = getImageUrl(mockedData.id);
+      
+      mockedData[id].image = getImageUrl(id + 1);
     
       function getImageUrl(prodId){
         return "/images/" + (prodId % 12) + ".jpg";
       }
 
-      res.render('pages/product', mockedData);
+      res.render('pages/product', mockedData[id]);
     }
 
   })
@@ -207,19 +438,19 @@ express()
       }, 
       {
         id: 2,
-        name: "Plant"
+        name: "Sweatpants"
       }, 
       {
         id: 3,
-        name: "Artwork"
+        name: "John Two-Button Lambskin Leather Blazer"
       }, 
       {
         id: 4,
-        name: "Hoodie"
+        name: "Goodyear Ultra Grip® Performance 2"
       }, 
       {
         id: 5,
-        name: "Plant"
+        name: "Echo Dot"
       }, 
       {
         id: 6,
