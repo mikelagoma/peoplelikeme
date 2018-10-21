@@ -143,8 +143,7 @@ express()
             // for(i=0;i<100;i++) {
               rp({
                 method: 'GET',
-                // uri: 'https://api-stg.syf.com/m2020/credit/customers/' + i + '/purchaseStatistics',
-                uri: 'https://api-stg.syf.com/m2020/credit/customers/' + i + '/profile',
+                uri: 'https://api-stg.syf.com/m2020/credit/customers/' + i + '/transactions/' + req.params.productId,
                 headers: {
                   'Authorization': 'Bearer ' + accessToken
                 }
@@ -168,8 +167,34 @@ express()
         });
 
     function endRequest(data){
+      console.log(data);
+      var mockedData = {
+        "id": req.params.productId,
+        "name": "Green Hoodie",
+        "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+        "image": "/images/1.jpg", //this is updated below
+        "sku": "HDE-001",
 
-      res.render('pages/product', data);
+        "retailer": "Retailer1",
+        "date": "2018-09-23",
+        "amount": "101.23",
+        "itemType": "clothes",
+        "links": [
+            {
+                "href": "/credit/customers/2/transactions/3",
+                "rel": "nextTransaction",
+                "method": "GET"
+            }
+        ]
+      };
+      
+      mockedData.image = getImageUrl(mockedData.id);
+    
+      function getImageUrl(prodId){
+        return "/images/" + (prodId % 12) + ".jpg";
+      }
+
+      res.render('pages/product', mockedData);
     }
 
   })
@@ -188,6 +213,30 @@ express()
         id: 3,
         name: "Artwork"
       }, 
+      {
+        id: 4,
+        name: "Hoodie"
+      }, 
+      {
+        id: 5,
+        name: "Plant"
+      }, 
+      {
+        id: 6,
+        name: "Artwork"
+      }, 
+      {
+        id: 7,
+        name: "Hoodie"
+      }, 
+      {
+        id: 8,
+        name: "Plant"
+      }, 
+      {
+        id: 9,
+        name: "Artwork"
+      }, 
     ];
 
     res.render('pages/index', {data});
@@ -195,3 +244,7 @@ express()
 
   .use(express.static(path.join(__dirname, 'public')))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+function getItem() {
+
+}
