@@ -285,8 +285,9 @@ Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Ale
         },
         {
           "id": 6,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "name": "Keurig K55/K-Classic Coffee Maker",
+          "description": "The Classic Keurig K-Cup Single Serve Coffee Maker includes 4 K-Cup pods, a water filter handle and 2 water filters to help your beverages taste their best.\n\
+BREWS MULTIPLE K-CUP POD SIZES: (6, 8, 10 oz.) – the most popular K-Cup pod brew sizes. Use the 6oz brew size to achieve the strongest brew.",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -304,8 +305,11 @@ Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Ale
         },
         {
           "id": 7,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "name": "Yeokou Men's Casual Slim Full Zip",
+          "description": "Fabric:38% Cashmere 20% Cotton 22% Wool 20% Anti-pilling fibers\n\
+Machine wash\n\
+Long sleeve zipper knit sweater jacket\n\
+Classic stand collar, two slant deep functional pockets, not fake",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -323,8 +327,8 @@ Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Ale
         },
         {
           "id": 8,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "name": "H2H Mens Knitted Slim Fit Pullover Sweater",
+          "description": "Snug fit, long sleeve, fine knitted fabric, shawl collar with with one button point decoration on neck-line, thermal and basic designed turtleneck pullover sweaters which you makes you fashion and handsome.",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -454,15 +458,15 @@ Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Ale
       }, 
       {
         id: 6,
-        name: "Artwork"
+        name: "Keurig K55/K-Classic Coffee Maker"
       }, 
       {
         id: 7,
-        name: "Hoodie"
+        name: "Yeokou Men's Casual Slim Full Zip"
       }, 
       {
         id: 8,
-        name: "Plant"
+        name: "H2H Mens Knitted Slim Fit Pullover Sweater"
       }, 
       {
         id: 9,
