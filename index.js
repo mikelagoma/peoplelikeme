@@ -40,7 +40,6 @@ function getTransactionData(accessToken, customerId, transaction, transactionDat
 
 express()
   .use(bodyParser.json())
-  .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
  
@@ -116,7 +115,8 @@ express()
       res.render('pages/home', products);
     }
   })
-  .get('/product', function(req, res) {
+
+  .get('/product/:productId', function(req, res) {
 
     var options = {
       method: 'POST',
@@ -168,8 +168,30 @@ express()
         });
 
     function endRequest(data){
+
       res.render('pages/product', data);
     }
 
   })
+
+  .get('/', function(req, res){
+    var data = [
+      {
+        id: 1,
+        name: "Hoodie"
+      }, 
+      {
+        id: 2,
+        name: "Plant"
+      }, 
+      {
+        id: 3,
+        name: "Artwork"
+      }, 
+    ];
+
+    res.render('pages/index', {data});
+  })
+
+  .use(express.static(path.join(__dirname, 'public')))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
