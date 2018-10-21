@@ -508,6 +508,19 @@ a:hover, a:active {
     margin-top: 32px;
 }
 
+.single-portfolio .review-flex {
+    display: flex;
+}
+
+.single-portfolio .review-flex .review-item {
+    min-width: 30%;
+    border-radius: 25px;
+    padding: 20px;
+    margin-right: 5px;
+    background-color: rgb(226, 226, 226) !important;
+    cursor: pointer;
+}
+
 .single-portfolio .post-share label {
     margin-right: 32px;
     text-transform: capitalize;
