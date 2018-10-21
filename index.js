@@ -189,20 +189,6 @@ Anti-odor technology prevents the growth of odor-causing microbes\n\
 Material wicks sweat & dries really fast",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
-          "reviews":[
-	          {
-	            title: "It's great!",
-	            text: "I love the color and it's a great value for the price! Would highly recommend!"
-	          },
-	          {
-	            title: "Meh",
-	            text: "Had a weird factory smell. I returned it after the smell persisted for a few days."
-	          },
-	          {
-	            title: "Perfect for a summer day",
-	            text: "It's light enough to carry with you and not havve to worry about losing it."
-	          },
-	        ],
 
           "retailer": "Retailer1",
           "date": "2018-09-23",
@@ -448,8 +434,21 @@ Tazon",
         }
       ]
       
-      
       mockedData[id].image = getImageUrl(id + 1);
+      mockedData[id].reviews = [
+        {
+          title: "It's great!",
+          text: "I love the color and it's a great value for the price! Would highly recommend!"
+        },
+        {
+          title: "Meh",
+          text: "Had a weird factory smell. I returned it after the smell persisted for a few days."
+        },
+        {
+          title: "Perfect for a summer day",
+          text: "It's light enough to carry with you and not havve to worry about losing it."
+        },
+      ];
     
       function getImageUrl(prodId){
         return "/images/" + (prodId % 12) + ".jpg";
