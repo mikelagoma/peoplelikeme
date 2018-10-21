@@ -438,15 +438,18 @@ Tazon",
       mockedData[id].reviews = [
         {
           title: "It's great!",
-          text: "I love the color and it's a great value for the price! Would highly recommend!"
+          text: "I love the color and it's a great value for the price! Would highly recommend!",
+          similarity: 100
         },
         {
           title: "Meh",
-          text: "Had a weird factory smell. I returned it after the smell persisted for a few days."
+          text: "Had a weird factory smell. I returned it after the smell persisted for a few days.",
+          similarity: 60
         },
         {
           title: "Perfect for a summer day",
-          text: "It's light enough to carry with you and not havve to worry about losing it."
+          text: "It's light enough to carry with you and not havve to worry about losing it.",
+          similarity: 80
         },
       ];
     

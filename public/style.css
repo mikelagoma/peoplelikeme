@@ -514,11 +514,33 @@ a:hover, a:active {
 
 .single-portfolio .review-flex .review-item {
     min-width: 30%;
+    min-height: 250px;
     border-radius: 25px;
     padding: 20px;
     margin-right: 5px;
-    background-color: rgb(226, 226, 226) !important;
+    background-color: rgb(226, 226, 226);
     cursor: pointer;
+}
+
+.single-portfolio .review-flex .review-item.similarity-100 {
+    background-color: rgb(138, 243, 117) !important;
+}
+
+.single-portfolio .review-flex .review-item.similarity-80 {
+    background-color: rgb(248, 241, 145) !important;
+}
+
+.single-portfolio .review-flex .review-item.similarity-60 {
+    background-color: rgb(255, 158, 158) !important;
+}
+
+.single-portfolio .review-flex .review-item .review-expand-arrow {
+    bottom: 30px;
+    position: absolute;
+}
+
+.single-portfolio .review-flex .review-item .review-expand-arrow img {
+    width: 22px;
 }
 
 .single-portfolio .post-share label {

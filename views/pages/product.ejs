@@ -92,9 +92,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
                         <div class="review-flex">
                             <% reviews.forEach(function(item) { %>
-                                <div class="review-item">
+                                <div class="review-item similarity-<%= item.similarity %>">
                                     <h3 class=""><%= item.title %></h3>
                                     <span><%= item.text %></span>
+                                    <div class="review-expand-arrow">
+                                        <img src="/images/arrow-expand.png" alt="Expand">
+                                    </div>
                                 </div>
                             <% }); %>
                         </div>
