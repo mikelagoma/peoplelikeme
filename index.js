@@ -179,8 +179,14 @@ express()
       var mockedData = [
         {
           "id": 1,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "name": "Under Armour Men's Tech Short sleeve T-Shirt",
+          "description": "100% Polyester\n\
+Imported\n\
+Loose: Fuller cut for complete comfort\n\
+UA Tech fabric is quick-drying, ultra-soft & has a more natural feel\n\
+Moisture Transport System wicks sweat & dries fast\n\
+Anti-odor technology prevents the growth of odor-causing microbes\n\
+Material wicks sweat & dries really fast",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -346,8 +352,9 @@ Classic stand collar, two slant deep functional pockets, not fake",
         },
         {
           "id": 9,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "name": "Instant Pot Duo Mini Pressure Cooker, Slow Cooker, Rice Cooker",
+          "description": "All the features of the Instant Pot duo, the bestselling electric pressure cooker in North America now available in a 3 Qt compact format\n\
+The perfect companion to your existing Instant Pot, use it for side dishes, vegetables or other accompaniments such as rice",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -364,9 +371,14 @@ Classic stand collar, two slant deep functional pockets, not fake",
           ]
         },
         {
-          "id": 9,
-          "name": "Green Hoodie",
-          "description": "Soft, carbon-brushed thermal knit, with plush sherpa body and hood lining and lightweight jersey sleeve lining.",
+          "id": 10,
+          "name": "PUMA Men's Axelion Sneaker",
+          "description": "Synthetic\n\
+Imported\n\
+Rubber sole\n\
+Shaft measures approximately low-top from arch\n\
+Run-Train Performance Sneaker\n\
+Tazon",
           "image": "/images/1.jpg", //this is updated below
           "sku": "HDE-001",
 
@@ -470,7 +482,11 @@ Classic stand collar, two slant deep functional pockets, not fake",
       }, 
       {
         id: 9,
-        name: "Artwork"
+        name: "Instant Pot Duo Mini Pressure Cooker, Slow Cooker, Rice Cooker"
+      }, 
+      {
+        id: 10,
+        name: "PUMA Men's Axelion Sneaker"
       }, 
     ];
 
